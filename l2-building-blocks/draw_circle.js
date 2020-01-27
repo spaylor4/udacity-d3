@@ -7,6 +7,9 @@ var svg = d3.select('.main').append('svg');
 
 svg.attr('width', 600).attr('height', 300);
 
+/*Note: y axis and x axis both start at 0, x axis increases L to R like normal
+y axis increases from top to bottom, opposite of normal Cartesian coordinates*/
+
 //create x and y scales for circle (video 22)
 // y is life expectancy, x is GDP per capita
 var y = d3.scale.linear().domain([15, 90]).range([250, 0]);
