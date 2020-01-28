@@ -7,3 +7,7 @@ While familiar with most of the charts covered in this lesson, a few caught my e
 * [Cycle plots](http://www.perceptualedge.com/articles/guests/intro_to_cycle_plots.pdf) can show trends over time and within groupings (e.g. day of week).
 
 * [Connected scatter plots](http://www.thefunctionalart.com/2012/09/in-praise-of-connected-scatter-plots.html) can be used to show changing relationships between two variables over time. These can be an alternative to animated scatter plots.
+
+### Color
+
+An alternative to color brewer which I hadn't seen previously, Adobe's color palette [generator](https://color.adobe.com/create/color-wheel) offers nice interactivity.
