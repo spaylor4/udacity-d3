@@ -16,8 +16,12 @@ Strftime mapping cheatsheet [here](http://man7.org/linux/man-pages/man3/strftime
 
 #### Building Chart
 
-Chart is plotted with code line `myChart.addSeries(null, dimple.bar.plot);`. The first argument is an option for faceting/grouping, which this example does not do, hence the null.
+Chart is plotted with code line `myChart.addSeries(null, dimple.plot.bar);`. The first argument is an option for faceting/grouping, which this example does not do, hence the null.
 
 Need to call `myChart.draw();` after all chart elements are constructed to render the chart in the webpage.
 
 Dimple automatically includes a tooltip with the data values.
+
+Dimple allows both a line and scatter plot on the same chart. To do so, you must add both series:
+    myChart.addSeries(null, dimple.plot.line);
+    myChart.addSeries(null, dimple.plot.scatter);
