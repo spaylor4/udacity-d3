@@ -12,6 +12,8 @@ In javascript, `===` tests for equality.
 
 Course references Mike Bostock's [Margin Convention](https://bl.ocks.org/mbostock/3019563), which was helpful in explaining the reasoning behind the setup.
 
+Strftime mapping cheatsheet [here](http://man7.org/linux/man-pages/man3/strftime.3.html).
+
 #### Building Chart
 
 Chart is plotted with code line `myChart.addSeries(null, dimple.bar.plot);`. The first argument is an option for faceting/grouping, which this example does not do, hence the null.
