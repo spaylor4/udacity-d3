@@ -6,7 +6,10 @@
   <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
   <style>
     circle.dimple-series-1 {
-      fill: red
+      fill: red;
+    }
+    h2 {
+      text-align: center;
     }
   </style>
     <script type="text/javascript">
@@ -21,7 +24,11 @@
               width = 1400 - margin,
               height = 600 - margin;
 
-          debugger;
+          d3.select('body')
+            .append('h2')
+            .text('World Cup Attendance');
+
+          /*debugger; */
 
           var svg = d3.select("body")
             .append("svg")
