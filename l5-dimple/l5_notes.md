@@ -15,3 +15,7 @@ Course references Mike Bostock's [Margin Convention](https://bl.ocks.org/mbostoc
 #### Building Chart
 
 Chart is plotted with code line `myChart.addSeries(null, dimple.bar.plot);`. The first argument is an option for faceting/grouping, which this example does not do, hence the null.
+
+Need to call `myChart.draw();` after all chart elements are constructed to render the chart in the webpage.
+
+Dimple automatically includes a tooltip with the data values.
