@@ -23,3 +23,5 @@ Refer back to [Thinking with Joins](https://bost.ocks.org/mike/join/) for a more
 D3 joins data (i.e. from a csv/json file) to html/svg elements on a page.
 
 The `.enter()` statement is a special type of selection statement that selects the bound data. If there are no existing html elements corresponding to the data, `.enter()` selects the bound data to placeholder elements that aren't yet on the page, and `.append('circle')` adds them to the page svg element.
+
+The enter method selects elements in data that aren't on the page yet, update selects those in data and already on the page, and exit selects those already on the page that aren't in the data.
