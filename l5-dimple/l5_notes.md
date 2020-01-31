@@ -4,7 +4,7 @@
 
 To start a local webserver, run `python3 -m http.server` in the terminal.
 
-To preview data in table format, run `console.table(data)` in javascript console. Need to refresh page to get debugger statement to catch and have data available.
+To preview data in table format, run `console.table(data)` in javascript console. Need to refresh page to get debugger statement to catch and have data available. With large data sets, this command can be problematic, and it's better to do `console.table(data.slice(0, 10))` to view only a slice of the data.
 
 In javascript, `===` tests for equality.
 
