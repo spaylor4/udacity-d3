@@ -38,10 +38,19 @@
                 .attr('class','chart');
 
       /*
-        Dimple.js Chart construction code
+        Dimple.js Chart construction code replaced with equivalent d3 code
       */
 
-          var myChart = new dimple.chart(svg, data);
+          debugger;
+          //var myChart = new dimple.chart(svg, data);
+          d3.select('svg')
+            .selectAll('circle')
+            .data(data)
+            .enter()
+            .append('circle')
+
+          debugger;
+
           var x = myChart.addTimeAxis("x", "year");
           x.dateParseFormat = '%Y';
           x.tickFormat = '%Y';
