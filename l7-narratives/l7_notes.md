@@ -16,3 +16,10 @@ d3.select('svg')
   .enter()
   .append('circle')
 ```
+If there are no circles, the `.selectAll('circle')` will return an empty array. Then the `.data(data)` piece binds the data, and `.append('circle')` creates a circle for each point in the data.
+
+Refer back to [Thinking with Joins](https://bost.ocks.org/mike/join/) for a more in-depth explanation of data joins.
+
+D3 joins data (i.e. from a csv/json file) to html/svg elements on a page.
+
+The `.enter()` statement is a special type of selection statement that selects the bound data. If there are no existing html elements corresponding to the data, `.enter()` selects the bound data to placeholder elements that aren't yet on the page, and `.append('circle')` adds them to the page svg element.
