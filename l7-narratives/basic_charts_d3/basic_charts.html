@@ -72,6 +72,14 @@
             .domain(count_extent);
           // https://s3.amazonaws.com/udacity-hosted-downloads/ud507/Canvas_and_Axes.jpeg
 
+          var time_axis = d3.svg.axis()
+            .scale(time_scale)
+            .ticks(d3.time.years, 2);
+
+          var count_axis = d3.svg.axis()
+            .scale(count_scale)
+            .orient('left'); //specify that y-axis should be on the left side
+
           myChart.addSeries(null, dimple.plot.bar);
           myChart.addSeries(null, dimple.plot.scatter);
           myChart.draw();
