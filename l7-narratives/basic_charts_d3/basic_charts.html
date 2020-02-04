@@ -5,8 +5,9 @@
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
   <style>
-    circle.dimple-series-1 {
-      fill: red;
+    circle {
+      opacity: 0.4;
+      stroke: none;
     }
     h2 {
       text-align: center;
@@ -24,6 +25,8 @@
               width = 1400 - margin,
               height = 600 - margin,
               radius = 3;
+
+          var color = 'steelblue';
 
           d3.select('body')
             .append('h2')
