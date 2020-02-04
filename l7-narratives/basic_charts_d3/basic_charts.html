@@ -23,9 +23,10 @@
           "use strict";
           var margin = 75,
               width = 1400 - margin,
-              height = 600 - margin,
-              radius = 3;
+              height = 600 - margin;
 
+          var radius = 3;
+          var rad_multiplier = 1.5;
           var color = 'steelblue';
 
           d3.select('body')
@@ -103,8 +104,20 @@
             .attr('cy', function(d) {
               return count_scale(d['attendance']);
             })
-            .attr('r', radius)
-            .attr('fill', color);
+            .attr('r', function(d) {
+              if (d['home'] == d['team1'] || d['home'] == d['team2']) {
+                return radius * rad_multiplier;
+              } else {
+                return radius;
+              }
+            })
+            .attr('fill', function(d) {
+              if (d['home'] == d['team1'] || d['home'] == d['team2']) {
+                return 'red';
+              } else {
+                return color;
+              }
+            });
         };
       </script>
   </head>
