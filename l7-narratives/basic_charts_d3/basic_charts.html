@@ -32,8 +32,6 @@
             .append('h2')
             .text('World Cup Attendance');
 
-          /*debugger; */
-
           var svg = d3.select("body")
             .append("svg")
               .attr("width", width + margin)
@@ -93,8 +91,6 @@
             .attr('class', 'y axis')
             .attr('transform', 'translate(' + margin + ', 0)')
             .call(count_axis);
-
-          debugger;
 
           /*myChart.addSeries(null, dimple.plot.bar);
           myChart.addSeries(null, dimple.plot.scatter);
