@@ -24,6 +24,20 @@ The `.enter()` statement is a special type of selection statement that selects t
 
 The enter method selects elements in data that aren't on the page yet, update selects those in data and already on the page, and exit selects those already on the page that aren't in the data.
 
+#### Callback Functions
+
+In d3, the chart construction code comes before the data loading code. When you load the data, you also call a callback function to draw the chart.
+```
+d3.tsv("world_cup_geo.tsv", draw);
+```
+
+You can also include intermediate functions to transform the data before calling the callback function, which can be useful for data formatting (i.e. with date parsing).
+```
+d3.tsv("world_cup_geo.tsv", function(d) {
+  // transform data here
+  }, draw);
+```
+
 #### Helpful Links
 
 * [Thinking with Joins](https://bost.ocks.org/mike/join/): a more in-depth explanation of data joins
