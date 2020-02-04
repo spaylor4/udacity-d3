@@ -48,6 +48,15 @@ Javascript works with both bracket and dot notation for accessing object fields.
 
 To render axes on the page, you need the `.call()` function to pass a selection to the axis function. Scott Murray's [axes tutorial](https://alignedleft.com/tutorials/d3/axes) has a more detailed explanation.
 
+#### Anonymous Accessor Functions
+
+Anonymous accessor functions are common in d3 for modifying/returning elements. Like python lambda functions, they are unnamed and can be used inline inside other functions. For example, when finding the range of dates in the World Cup chart data, we used an accessor function to return the date attribute of each data element:
+```
+var count_extent = d3.extent(data, function(d) {
+  return d['attendance'];
+})
+```
+
 #### Helpful Links
 
 * [Thinking with Joins](https://bost.ocks.org/mike/join/): a more in-depth explanation of data joins
