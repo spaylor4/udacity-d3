@@ -8,10 +8,10 @@
     h2 {
       color: black;
       text-align: center;
+      font-family: arial;
     }
 
     .axis {
-      font-family: arial;
       font-size: 0.6em;
     }
 
@@ -148,7 +148,37 @@
             .attr('transform', 'translate(' + (width - 100) + ',' + 20 + ')')
             .selectAll('g')
             .data(['Home Team', 'Others'])
-            .enter().append('g');
+            .enter().append('g')
+            .style('font-family', 'sans-serif');
+
+          legend.append('circle')
+            .attr('cy', function(d, i) {
+              return i * 30;
+            })
+            .attr('r', function(d) {
+                if (d == 'Home Team') {
+                  return radius * rad_multiplier;
+                } else {
+                  return radius;
+                }
+            })
+            .attr('fill', function(d) {
+                if (d == 'Home Team') {
+                  return 'red';
+                } else {
+                  return color;
+                }
+            });
+
+          legend.append('text')
+            .attr('y', function(d, i) {
+                return i * 30 + 5;
+            })
+            .attr('x', radius * 5)
+            .text(function(d) {
+                return d;
+            });
+
 
 
         };
