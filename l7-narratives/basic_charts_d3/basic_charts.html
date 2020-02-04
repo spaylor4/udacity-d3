@@ -88,6 +88,8 @@
 
   d3.tsv("world_cup_geo.tsv", function(d) {
     d['date'] = format.parse(d['date']);
+    d['attendance'] = +d['attendance']; //parse string as numeric
+    return d;
   }, draw);
   </script>
 </body>
