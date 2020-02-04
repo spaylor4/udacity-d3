@@ -41,7 +41,6 @@
         Dimple.js Chart construction code replaced with equivalent d3 code
       */
 
-          debugger;
           //var myChart = new dimple.chart(svg, data);
           d3.select('svg')
             .selectAll('circle')
@@ -51,11 +50,19 @@
 
           debugger;
 
-          var x = myChart.addTimeAxis("x", "year");
+          /*var x = myChart.addTimeAxis("x", "year");
           x.dateParseFormat = '%Y';
           x.tickFormat = '%Y';
           x.timeInterval = 4;
-          myChart.addMeasureAxis("y", "attendance");
+          myChart.addMeasureAxis("y", "attendance"); */
+
+          var time_extent = d3.extent(data, function(d) {
+            return d['date'];
+          })
+          var count_extent = d3.extent(data, function(d) {
+            return d['attendance'];
+          })
+
           myChart.addSeries(null, dimple.plot.bar);
           myChart.addSeries(null, dimple.plot.scatter);
           myChart.draw();
