@@ -38,6 +38,16 @@ d3.tsv("world_cup_geo.tsv", function(d) {
   }, draw);
 ```
 
+#### Data Parsing/Formatting
+
+Can check data type using `instanceof`, which returns T/F. For example, `d['date'] instanceof Date` will return true if `d['date']` is formatted as a date.
+
+Javascript works with both bracket and dot notation for accessing object fields.
+
+#### D3 Call Function
+
+To render axes on the page, you need the `.call()` function to pass a selection to the axis function. Scott Murray's [axes tutorial](https://alignedleft.com/tutorials/d3/axes) has a more detailed explanation.
+
 #### Helpful Links
 
 * [Thinking with Joins](https://bost.ocks.org/mike/join/): a more in-depth explanation of data joins
