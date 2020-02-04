@@ -142,6 +142,15 @@
                 return color;
               }
             });
+
+          var legend = svg.append('g')
+            .attr('class', 'legend')
+            .attr('transform', 'translate(' + (width - 100) + ',' + 20 + ')')
+            .selectAll('g')
+            .data(['Home Team', 'Others'])
+            .enter().append('g');
+
+
         };
       </script>
   </head>
