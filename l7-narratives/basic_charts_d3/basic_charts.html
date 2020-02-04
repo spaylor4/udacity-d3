@@ -63,6 +63,14 @@
             return d['attendance'];
           })
 
+          var time_scale = d3.time.scale()
+            .range([margin, width])
+            .domain(time_extent);
+
+          var count_scale = d3.scale.linear()
+            .range([height, margin])
+            .domain(count_extent);
+
           myChart.addSeries(null, dimple.plot.bar);
           myChart.addSeries(null, dimple.plot.scatter);
           myChart.draw();
