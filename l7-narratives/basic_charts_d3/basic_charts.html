@@ -22,7 +22,8 @@
           "use strict";
           var margin = 75,
               width = 1400 - margin,
-              height = 600 - margin;
+              height = 600 - margin,
+              radius = 3;
 
           d3.select('body')
             .append('h2')
@@ -47,8 +48,6 @@
             .data(data)
             .enter()
             .append('circle')
-
-          debugger;
 
           /*var x = myChart.addTimeAxis("x", "year");
           x.dateParseFormat = '%Y';
@@ -92,9 +91,21 @@
             .attr('transform', 'translate(' + margin + ', 0)')
             .call(count_axis);
 
-          myChart.addSeries(null, dimple.plot.bar);
+          debugger;
+
+          /*myChart.addSeries(null, dimple.plot.bar);
           myChart.addSeries(null, dimple.plot.scatter);
-          myChart.draw();
+          myChart.draw(); */
+
+          d3.selectAll('circle')
+            .attr('cx', function(d) {
+              return time_scale(d['date']); //returns pixel value equivalent for date
+            })
+            .attr('cy', function(d) {
+              return count_scale(d['attendance']);
+            })
+            .attr('r', radius)
+            .attr('fill', color);
         };
       </script>
   </head>
