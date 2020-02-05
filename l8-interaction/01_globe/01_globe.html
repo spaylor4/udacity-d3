@@ -36,6 +36,17 @@
 
         function plot_points(data) {
             //draw circles logic
+            debugger;
+            var nested = d3.nest()
+                           .key(function(d) {
+                              debugger;
+                              return d['date'].getUTCFullYear();
+                           })
+                           .rollup(function(leaves) {
+                              debugger;
+                              return "";
+                           })
+                           .entries(data);
         };
 
         var format = d3.time.format("%d-%m-%Y (%H:%M h)");
