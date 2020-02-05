@@ -9,8 +9,8 @@
       function draw(geo_data) {
         "use strict";
         var margin = 75,
-            width = 1920 - margin,
-            height = 1080 - margin;
+            width = 1400 - margin,
+            height = 600 - margin;
 
         var svg = d3.select("body")
             .append("svg")
@@ -33,6 +33,18 @@
                     .style('fill', 'rgb(9, 157, 217)')
                     .style('stroke', 'black')
                     .style('stroke-width', 0.5);
+
+        function plot_points(data) {
+            //draw circles logic
+        };
+
+        var format = d3.time.format("%d-%m-%Y (%H:%M h)");
+
+        d3.tsv("world_cup_geo.tsv", function(d) {
+          d['attendance'] = +d['attendance'];
+          d['date'] = format.parse(d['date']);
+          return d;
+        }, plot_points);
 
 
       };
