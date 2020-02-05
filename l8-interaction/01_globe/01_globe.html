@@ -44,7 +44,9 @@
                            })
                            .rollup(function(leaves) {
                               debugger;
-                              return "";
+                              d3.sum(leaves, function(d) {
+                                return d['attendance'];
+                              });
                            })
                            .entries(data);
         };
