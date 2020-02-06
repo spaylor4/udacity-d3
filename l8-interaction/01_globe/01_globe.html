@@ -81,10 +81,18 @@
                    return d[1];
                });
 
+               var teams = d3.set()
+
+               leaves.forEach(function(d) {
+                 teams.add(d['team1']);
+                 teams.add(d['team2']);
+               });
+
                return {
                  'attendance' : total,
                  'x' : center_x,
-                 'y' : center_y
+                 'y' : center_y,
+                 'teams' : teams.values()
                };
             }
 
