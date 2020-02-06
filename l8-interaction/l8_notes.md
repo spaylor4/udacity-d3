@@ -4,11 +4,30 @@
 
 In GeoJSON, longitude coordinates come first and latitude second.
 
-#### D3 Nest Function
+#### D3 Functions
 
 D3 [nest function](https://github.com/d3/d3-collection/blob/v1.0.7/README.md#nest) helps to group and aggregate data.
 
 The key function specifies the grouping of the nest, and the rollup function takes each group and performs a specified aggregation.
+
+[Sort function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) orders data. In the class's world cup example, we sorted our grouped data by attendance so that world cups with the highest attendance were plotted first.
+```
+svg.append('g')
+  .attr("class", "bubble")
+  .selectAll("circle")
+  .data(nested.sort(function(a, b) {
+    return b.values['attendance'] - a.values['attendance'];
+  }))
+  .enter()
+  .append("circle")
+```
+
+* If the anonymous function inside the sort function returns <0, the data is sorted so a is before b.
+
+* If the return is >0, b is sorted before a.
+
+* If they are equal, there is no change to the existing order.
+
 
 #### Helpful Links
 
