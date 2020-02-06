@@ -34,10 +34,10 @@
                     .style('stroke', 'black')
                     .style('stroke-width', 0.5);
 
-        /* initial nest function before abstracting rollup
         function plot_points(data) {
             //draw circles logic
-            var nested = d3.nest()
+            // initial nest function before abstracting rollup
+            /* var nested = d3.nest()
                            .key(function(d) {
                               return d['date'].getUTCFullYear();
                            })
@@ -97,7 +97,7 @@
 
             var attendance_extent = d3.extent(nested, function(d) {
               return d.values['attendance'];
-            })
+            });
 
             var radius = d3.scale.sqrt()
                             .domain(attendance_extent)
@@ -111,9 +111,7 @@
               .append("circle")
               .attr('cx', function(d) { return d.values['x']; })
               .attr('cy', function(d) { return d.values['y']; })
-              .attr('r', function(d) {
-                return radius(d.values['attendance']);
-              });
+              .attr('r', function(d) {return radius(d.values['attendance']); });
 
         };
 
