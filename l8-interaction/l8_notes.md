@@ -28,6 +28,9 @@ svg.append('g')
 
 * If they are equal, there is no change to the existing order.
 
+#### Adding Animation/Interaction
+
+To show animation over time, we'll need to use both the `.exit()` and `.enter()` functions, whereas previously for static graphics we only used `.enter()`. This will remove elements from the previous frame before adding the elements for the next frame.
 
 #### Helpful Links
 
