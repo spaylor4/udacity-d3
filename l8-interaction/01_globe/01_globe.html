@@ -131,6 +131,16 @@
 
         };
 
+        function update(year) {
+          var filtered = nested.filter(function(d) {
+            return new Date(d['key']).getUTCFullYear() === year;
+          });
+
+
+
+
+        }
+
         var format = d3.time.format("%d-%m-%Y (%H:%M h)");
 
         d3.tsv("world_cup_geo.tsv", function(d) {
