@@ -52,15 +52,6 @@
             }
         }
 
-        var buttons = d3.select('body')
-                        .append('div')
-                        .attr('class', 'years_buttons')
-                        .selectAll('div')
-                        .data(years)
-                        .enter()
-                        .append('div')
-                        .text(function(d) {return d;});
-
         var projection = d3.geo.mercator()
                               .scale(170) //controls zoom
                               .translate([width / 2, height / 1.5]); //controls center of map
@@ -195,6 +186,15 @@
 
             if(year_idx >= years.length) {
               clearInterval(year_interval);
+
+              var buttons = d3.select('body')
+                              .append('div')
+                              .attr('class', 'years_buttons')
+                              .selectAll('div')
+                              .data(years)
+                              .enter()
+                              .append('div')
+                              .text(function(d) {return d;});
             }
           }, 1000);
 
