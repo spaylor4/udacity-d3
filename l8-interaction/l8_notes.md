@@ -41,3 +41,5 @@ To show animation over time, we'll need to use both the `.exit()` and `.enter()`
 * Shapefile to GeoJSON [tutorial](https://ben.balter.com/2013/06/26/how-to-convert-shapefiles-to-geojson-for-use-on-github/)
 
 * D3 nest function [examples](http://bl.ocks.org/phoebebright/raw/3176159/)
+
+* D3 animation [tutorial](http://synthesis.sbecker.net/articles/2012/07/10/learning-d3-part-3-animation-interaction)
