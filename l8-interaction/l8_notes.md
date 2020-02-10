@@ -45,3 +45,9 @@ In the example, we used the javascript `this` keyword to select the button that 
 * D3 nest function [examples](http://bl.ocks.org/phoebebright/raw/3176159/)
 
 * D3 animation [tutorial](http://synthesis.sbecker.net/articles/2012/07/10/learning-d3-part-3-animation-interaction)
+
+* Mike Bostock's d3 [maps tutorial](https://medium.com/@mbostock/command-line-cartography-part-1-897aa8f8ca2c) and webkid's [small multiple tutorial](https://webkid.io/blog/multiple-maps-d3/)
+
+* Python [basemap package](https://pypi.python.org/pypi/basemap/1.0.7) and R [maps package](http://cran.r-project.org/web/packages/maps/maps.pdf)
+
+* Mike Bostock's [For Example](https://bost.ocks.org/mike/example/)
