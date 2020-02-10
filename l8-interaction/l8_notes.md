@@ -32,6 +32,8 @@ svg.append('g')
 
 To show animation over time, we'll need to use both the `.exit()` and `.enter()` functions, whereas previously for static graphics we only used `.enter()`. This will remove elements from the previous frame before adding the elements for the next frame.
 
+In the example, we used the javascript `this` keyword to select the button that is clicked on. An explanation of `this` is available [here](http://tomhicks.github.io/code/2014/08/11/some-of-this.html).
+
 #### Helpful Links
 
 * [Mapschool](https://mapschool.io): overview of vector/raster, projections, and other basics of mapping
