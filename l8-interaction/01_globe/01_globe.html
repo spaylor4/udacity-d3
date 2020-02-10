@@ -195,6 +195,17 @@
                               .enter()
                               .append('div')
                               .text(function(d) {return d;});
+
+              buttons.on('click', function(d) {
+                d3.select(this)
+                  .transition()
+                  .duration(500)
+                  .style('background', 'lightBlue')
+                  .style('color', 'white');
+
+                update(d);
+
+              })
             }
           }, 1000);
 
